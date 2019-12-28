@@ -1,6 +1,6 @@
 # pelvis_segmentation
 
-Get started by creating a folder named "data". In this folder, insert your images and masks in the "numpy array" format (one file per image and one file per masks). Images are expected to have a size (length, width, height), while masks are expcted to be (length, width, height, n_organs+1), where n_organs is the number of structures. E.g.,
+Get started by creating a folder named "data". In this folder, insert your images and masks in the "numpy array" format (one file per image and one file per masks). Images are expected to have a size (length, width, height), while masks are expected to be (length, width, height, n_organs+1), where n_organs is the number of structures. E.g.,
 If for example you have two image modalities CT and CBCT, please respect the following organization:  
 
 data  
