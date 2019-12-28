@@ -2,7 +2,7 @@
 
 This repository shows an example of code for segmenting several structures with u-net in keras and tensorflow using online data augmentation in 3D.
 
-Get started by creating a folder named "data". In this folder, insert your images and masks in the "numpy array" format (one file per image and one file per masks). Images are expected to have a size (length, width, height), while masks are expected to be (length, width, height, n_organs+1), where n_organs is the number of structures. If for example you have two image modalities CT and Cone Beam CT (CBCT), please respect the following organization:  
+Get started by creating a folder named "data". In this folder, insert your images and masks in the "numpy array" format (one file per image and one file per mask). Images are expected to have a size (length, width, height), while masks are expected to be (length, width, height, n_organs+1), where n_organs is the number of structures. If for example you have two image modalities CT and Cone Beam CT (CBCT), please respect the following organization:  
 
 data  
 |-- CBCT-0-image.npy  
