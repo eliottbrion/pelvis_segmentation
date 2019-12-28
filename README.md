@@ -20,5 +20,7 @@ Finally, don't forget to update the beginning of each .py file of this repositor
 
 The file main.py shows an example of use with a 3-fold cross-validation using 63 CBCTs and 74 CTs.
 
+Bellow is an example. Each column corresponds to a slice of the same CBCT. Dark colours represent reference segmentations, while light colours show u-net segmentation. The predicted bladder, in pink, has a DSC of 0.940 (u-net), the rectum, in light green, has a DSC of 0.791, the prostate, in light blue, has a DSC of 0.780.
+
 ![alt text](example.png)
 
