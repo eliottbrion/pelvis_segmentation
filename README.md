@@ -20,5 +20,5 @@ Finally, don't forget to update the beginning of each .py file of this repositor
 
 The file main.py shows an example of use with a 3-fold cross-validation using 63 CBCTs and 74 CTs.
 
-
+![alt text](example.png)
 
