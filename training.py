@@ -63,6 +63,7 @@ def train(partition, previous_dir, gpu, dest_dir, params):
         model = load_model(previous_dir + '/weights.h5', custom_objects=co)
         
     # Compute normalization parameters
+    # https://en.wikipedia.org/wiki/Standard_deviation#Rapid_calculation_methods
     s1 = 0
     s2 = 0
     N = len(partition['train'])*np.prod(image_size)
@@ -72,7 +73,7 @@ def train(partition, previous_dir, gpu, dest_dir, params):
         s2 = s2 + np.sum(np.square(image.flatten()))
     normalization_params = {}
     normalization_params['mean'] = s1/N
-    normalization_params['std'] = np.sqrt((N*s2-s1**2)/(N*(N-1))) # https://en.wikipedia.org/wiki/Standard_deviation#Rapid_calculation_methods
+    normalization_params['std'] = np.sqrt((N*s2-s1**2)/(N*(N-1))) 
     pickle.dump( normalization_params, open( crossvalidation_dir + '/normalization_params.p', "wb" ) )
         
     # Train
