@@ -63,7 +63,7 @@ def train(partition, previous_dir, gpu, dest_dir, params):
         model = load_model(previous_dir + '/weights.h5', custom_objects=co)
         
     # Compute normalization parameters
-    # https://en.wikipedia.org/wiki/Standard_deviation#Rapid_calculation_methods
+    # Adapted from https://en.wikipedia.org/wiki/Standard_deviation#Rapid_calculation_methods
     s1 = 0
     s2 = 0
     N = len(partition['train'])*np.prod(image_size)
