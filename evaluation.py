@@ -15,9 +15,11 @@ spacing = [1.2, 1.2, 1.5]
 organs_names = ['bladder', 'rectum', 'prostate']
 
 def evaluate(filenames, src_dir, metric_types, gpu, save_predictions=False):
-    # filenames: list of the filenames of the images fro which we want to compute the network prediction and and the performance criteria
+    # filenames: list of the filenames of the images for which we want to compute the network prediction and and the performance criteria
     # src_dir: path of the folder containing the model weights and the normalization parameters. The predictions are saved in the folder src_dir/predictions
-    # and the performance criteria are saved in the folder src_dir/performance_criteria
+    # metrics_types: list containing one of the following metrics: 'overlap', 'distance', and/or 'volume'.
+    # gpu: id of the gpu to be used (integer).
+    # save_prediction: whether or not the predictions must be saved in the folder src_dir/metrics
     
     os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu)
     
