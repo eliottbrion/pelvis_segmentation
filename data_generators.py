@@ -1,4 +1,4 @@
-# This file is inspired from https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly
+# Adapted from https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly
 
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
