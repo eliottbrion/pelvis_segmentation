@@ -2,7 +2,6 @@ from keras.models import Model, Sequential
 from keras.layers import Input, concatenate, Conv3D, MaxPooling3D, Conv3DTranspose, Flatten, Dense
 import tensorflow as tf
 import numpy as np
-import keras
 import os
 import pickle
 from scipy import ndimage
