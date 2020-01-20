@@ -26,9 +26,9 @@ def evaluate(filenames, src_dir, metric_types, gpu, save_predictions=False):
     n_images = len(filenames)
     
     print('loading model...')
-    
     model = load_model(src_dir + '/weights.h5', custom_objects={'dl': dl, 'b':b, 'r':r, 'p': p})
     print('done.')
+    
     normalization_params = pickle.load( open( src_dir + '/normalization_params.p', "rb" ) )
 
     if not os.path.exists(src_dir + '/predictions'):
