@@ -41,7 +41,7 @@ def evaluate(filenames, src_dir, metric_types, gpu, save_predictions=False):
     for patient_num in range(n_patients):
         filename = filenames[patient_num]
         if os.path.exists(src_dir + '/predictions/' + filename + '_prediction.npy'):
-            #print('Loading previously saved prediction')
+            # Load previously saved prediction
             prediction = np.load(src_dir + '/predictions/' + filename + '_prediction.npy')
         else:
             image = np.load('data/' + filename + '-image.npy')
