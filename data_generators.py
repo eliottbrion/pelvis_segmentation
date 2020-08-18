@@ -144,14 +144,14 @@ def image_transform(image, shears, angles, shifts, order):
                          [0, 0, 1, shifts[2]],
                          [0, 0, 0, 1]])
 
-    offset = np.array([[1, 0, 0, int(image_size[0]/2)],
-                   [0, 1, 0, int(image_size[1]/2)],
-                   [0, 0, 1, int(image_size[2]/2)],
-                   [0, 0, 0, 1]])
-
-    offset_opp = np.array([[1, 0, 0, -int(image_size[0]/2)],
+    offset = np.array([[1, 0, 0, -int(image_size[0]/2)],
                    [0, 1, 0, -int(image_size[1]/2)],
                    [0, 0, 1, -int(image_size[2]/2)],
+                   [0, 0, 0, 1]])
+
+    offset_opp = np.array([[1, 0, 0, int(image_size[0]/2)],
+                   [0, 1, 0, int(image_size[1]/2)],
+                   [0, 0, 1, int(image_size[2]/2)],
                    [0, 0, 0, 1]])
 
     angles = np.deg2rad(angles)
